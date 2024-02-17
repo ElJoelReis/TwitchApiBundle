@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * MIT License
@@ -21,7 +23,7 @@ class SimplyStreamTwitchApiExtension extends Extension
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('oauth.xml');
